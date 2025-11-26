@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anonymous HQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div id="loginOverlay" class="overlay">
+  <div class="login-box glitch">
+    <h2>Access Portal</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="saveUser">Enter System</button>
+
+    <hr>
+
+    <h3>Admin Login</h3>
+    <input type="text" id="adminUser" placeholder="Admin Username">
+    <input type="password" id="adminPass" placeholder="Admin Password">
+    <button id="adminLogin">Admin Access</button>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="glitch">💀 Anonymous Command Center</h1>
+
+  <div id="secretAdminBtn" class="secret-btn">⚡</div>
+
+  <div id="onlineUsers" class="online-box"></div>
+
+  <div id="messages"></div>
+
+  <textarea id="msgBox" placeholder="Type a message…"></textarea>
+  <button id="sendBtn">Send</button>
+
+  <p id="adminTag" class="admin-tag">ADMIN MODE ACTIVE</p>
+</div>
+
+<div id="adminPanel" class="admin-panel">
+  <h2>ADMIN DASHBOARD</h2>
+  <p>Total Messages: <span id="msgCount">0</span></p>
+  <button id="deleteAll">Delete ALL Messages</button>
+  <button id="closePanel">Close</button>
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

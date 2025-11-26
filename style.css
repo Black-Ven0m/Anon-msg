@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: black;
+  color: #00ff9d;
+  overflow: hidden;
+}
+
+canvas#matrix {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  z-index:-1;
+}
+
+/* MAIN UI */
+.container {
+  padding: 20px;
+  height:100vh;
+  box-sizing:border-box;
+  overflow-y: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #00ffdd;
+  text-shadow: 0 0 12px #00ff9d;
+  margin-bottom: 15px;
+}
+
+#messages {
+  height: 430px;
+  overflow-y: auto;
+  border: 1px solid #00ff9d;
+  padding: 10px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.4);
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-left: 3px solid #00ffdd;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(5px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+.username {
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+.time {
+  font-size: 11px;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  padding: 4px 7px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+textarea {
+  width:100%;
+  background:black;
+  color:#00ff9d;
+  border:1px solid #00ff9d;
+  padding:10px;
+  height:80px;
+}
+
+button {
+  width:100%;
+  padding:10px;
+  background:#00ffdd;
+  border:none;
+  font-size:17px;
+  cursor:pointer;
+  margin-top:5px;
+}
+
+button:hover {background:#00ffa2;}
+
+/* LOGIN OVERLAY */
+.overlay {
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.92);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-box {
+  background:black;
+  border:2px solid #00ff9d;
+  padding:30px;
+  width:300px;
+  text-align:center;
+}
+
+.login-box input {
+  width:90%;
+  padding:10px;
+  margin:10px 0;
+  background:black;
+  color:#00ff9d;
+  border:1px solid #00ff9d;
+}
+
+/* ADMIN PANEL */
+.admin-panel {
+  position:fixed;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  background:black;
+  padding:20px;
+  border:2px solid #00ff9d;
+  display:none;
+  width:300px;
+  text-align:center;
+}
+
+.secret-btn {
+  position:absolute;
+  top:10px; right:20px;
+  background:#00ff9d;
+  color:black;
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+  display:none;
+}
+
+.admin-tag {
+  display:none;
+  text-align:center;
+  color:#ff0066;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* ONLINE USERS */
+.online-box {
+  border:1px solid #00ff9d;
+  padding:8px;
+  margin-bottom:10px;
+  background:rgba(0,0,0,0.5);
+  height: 45px;
+  overflow-x:auto;
+  white-space: nowrap;
+}
+
+/* GLITCH EFFECT */
+.glitch {
+  text-shadow: 1px 1px #00ff00, -1px -1px #00ffff;
+  animation: glitch 1.4s infinite alternate;
+}
+
+@keyframes glitch {
+  0% {transform: skew(0deg);}
+  50% {transform: skew(2deg);}
+  100% {transform: skew(-2deg);}
+}

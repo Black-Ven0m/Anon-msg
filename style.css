@@ -10,7 +10,7 @@ canvas#matrix {
   position: fixed;
   top:0; left:0;
   width:100%; height:100%;
-  z-index:-1;
+  z-index:-1; /* FIXED: canvas behind everything */
 }
 
 /* MAIN UI */
@@ -92,7 +92,7 @@ button {
 
 button:hover {background:#00ffa2;}
 
-/* LOGIN OVERLAY */
+/* LOGIN OVERLAY FIX */
 .overlay {
   position:fixed;
   top:0; left:0;
@@ -101,6 +101,7 @@ button:hover {background:#00ffa2;}
   display:flex;
   justify-content:center;
   align-items:center;
+  z-index: 999999; /* FIXED: overlay always on top */
 }
 
 .login-box {
